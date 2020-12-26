@@ -1,1 +1,1 @@
-web: gunicorn django - home:app
+web: gunicorn gettingstarted.wsgi
