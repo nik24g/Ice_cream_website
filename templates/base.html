@@ -15,11 +15,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <style>
-  .user li a:hover {
-    color: white;
+  .button{
+    padding: 4px 0px;
   }
 </style>
-
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -50,9 +49,6 @@
               <li><a class="dropdown-item" href="#">Family Pack</a></li>
             </ul>
           </li>
-          <!-- <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li> -->
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/contact">Contact Us</a>
           </li>
@@ -72,8 +68,8 @@
           </ul>
         </div>
         {% else %}
-        <button type="button" class="btn btn-outline-success mx-2"><a href="/signin"></a>Login</button>
-        <button type="button" class="btn btn-outline-success"><a href="/signup">Sign Up</a></button>
+        <div class="button"><a href="/signin" class="btn btn-outline-success mx-2">Login</a></div>
+        <div class="button"><a href="/signup" class="btn btn-outline-success">Sign Up</a></div>
         {% endif %}
       </div>
     </div>

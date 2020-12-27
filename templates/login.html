@@ -99,6 +99,11 @@
   #container {
     display: inline-flex;
   }
+  #logo img {
+    margin: 3px 5px;
+    height: 56px;
+    border-radius: 75px;
+}
 </style>
 
 <body class="text-center">
@@ -116,7 +121,9 @@
     <main class="form-signin">
       <form action="/signin" method="POST">
         {% csrf_token %}
-        <!-- <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+        <div id="logo">
+          <a href="/"><img class="mb-4" src="/static/img/logo.jpg" alt="" width="72" height="57"></a>
+        </div>
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
         <label for="inputusername" class="visually-hidden">Username</label>
         <input type="text" id="inputemail" class="form-control" placeholder="Username" name="username" required

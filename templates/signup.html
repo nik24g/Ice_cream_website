@@ -377,6 +377,16 @@
         border-color: #badbcc;
         text-align: center !important;
     }
+
+    #logo img {
+        margin: 3px 5px;
+        height: 56px;
+        border-radius: 75px;
+    }
+    #logo{
+        display: flex;
+        justify-content: center;
+    }
 </style>
 
 <body>
@@ -397,6 +407,9 @@
                 <div class="signup-content">
                     <form method="POST" id="signup-form" class="signup-form" action="/signup">
                         {% csrf_token %}
+                        <div id="logo">
+                            <a href="/"><img class="mb-4" src="/static/img/logo.jpg" alt="" width="72" height="57"></a>
+                        </div>
                         <h2 class="form-title">Create account</h2>
                         <div class="form-group">
                             <input type="text" class="form-input" name="fname" id="fname" placeholder="First Name"
