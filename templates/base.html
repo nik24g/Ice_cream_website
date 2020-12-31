@@ -18,6 +18,16 @@
   .button{
     padding: 4px 0px;
   }
+  .blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
 </style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -55,12 +65,12 @@
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-success" type="submit" style="margin-right: 13px">Search</button>
         </form>
         {% if user.is_authenticated %}
         <div class="btn-group mx-2">
           <button type="button" class="btn btn-outline-success dropdown-toggle" data-bs-toggle="dropdown"
-            aria-expanded="false">
+            aria-expanded="false" style="position: relative; left: -8px;">
             Welcome {{request.user}}
           </button>
           <ul class="dropdown-menu">
@@ -84,6 +94,13 @@
   {% endfor %}
   {% endif %}
   {% block body %} {% endblock body %}
+  <footer class="blog-footer">
+      <p>&copy; 2020-2021 icecream2412 developed by Nitin Goswami</p>
+      <p>Email us at- nitingoswami1900@gmail.com</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
 </body>
 
 </html>

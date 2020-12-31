@@ -1,4 +1,60 @@
 {% extends 'base.html' %}
 
 {% block title %}About{% endblock title %}
-{% block body %}This is About ka body block{% endblock body %}
+{% block body %}
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@800&display=swap" rel="stylesheet">
+<style>
+    .about {
+        display: flex;
+        justify-content: center;
+        margin: 15px;
+        font-family: 'Baloo Bhai 2', cursive;
+    }
+
+    .box {
+        display: flex;
+        color: black;
+    }
+
+    .detail {
+        /* border: 2px solid brown; */
+        padding: 34px;
+        margin: 3px 6px;
+        border-radius: 30px;
+        background-color: #f2f2f2;
+        font-family: 'Baloo Bhai 2', cursive;
+        text-decoration: none;
+    }
+
+    .image {
+        margin: 8px;
+        padding: 4px;
+        /* border: 2px solid green; */
+    }
+
+    img {
+        border-radius: 30px;
+    }
+
+    @media (max-width: 991px) {
+        .box {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+</style>
+<div class="about">
+    <h1>About Us</h1>
+</div>
+<div class="box">
+    <div class="image">
+        <img src="/static/img/nitin.jpeg" alt="">
+    </div>
+    <div class="detail">This store is own by Nitin Goswami.<br> This website is designed and developed by Nitin Goswami.
+        This is one of the best online store for buying icecreams and cakes. Our service provides you the best
+        experiance for buying products and getting help from our side. <br>If you forget your password please contact us
+        by contact form we will respond under 24hours. <br> For visiting our office You can come at koteshwar colony
+        ghasmandi gwalior 474003 M.P</div>
+</div>
+{% endblock body %}

@@ -54,7 +54,7 @@ def signin(request):
 
 def logoutuser(request):
     logout(request)
-    return redirect('/signin')
+    return redirect('/')
 
 def signup(request):
     if request.method == 'POST':
